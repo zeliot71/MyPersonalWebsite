@@ -1,0 +1,52 @@
+body{
+    font-family: 'BIZ UDMincho', serif;
+    margin: 0%;
+}
+h1{
+    color: hotpink;
+    font-size: 40px;
+}
+h2{
+    font-size: 40px;
+}
+.half-width{
+    width: 30%;
+    padding: 2%;
+    margin-left: 2%;
+    float: left;
+}
+.greeting{
+    margin-top: 200px;
+    justify-content: center;
+
+}
+a{
+    text-decoration: none;
+    background-image: linear-gradient(hotpink, red);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+}
+p{
+    font-size: 20px;
+}
+.half-width img{
+    width: 750px;
+    height: 700px;
+   
+}
+.header-section{
+    background-image: url(images/header-bg.png);
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    
+}
+section{
+    height: 800px;
+}
+.biography-section{
+    background-image: url(images/biography-bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+}
