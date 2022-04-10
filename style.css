@@ -13,15 +13,35 @@ h2{
     font-size: 40px;
 }
 .half-width{
-    width: 30%;
-    padding: 2%;
-    margin-left: 10%;
+    width: 48%;
+    padding: 1%;
+    /* margin-left: 10%; */
     float: left;
 }
+
+.half-width-left{
+    width: 40%;
+    padding: 1%;
+    margin-left: 5%;
+    float: left;
+}
+.half-width-right{
+    width: 40%;
+    padding: 2%;
+    margin-left: 6%;
+    float: right;
+    margin-bottom: 40px;
+}
+.half-width-right img{
+    width: 70%;
+}
 .greeting{
-    margin-top: 200px;
+    /* margin-top: 200px; */
     justify-content: center;
 
+}
+.greeting p{
+    width: 80%;
 }
 a{
     text-decoration: none;
@@ -35,8 +55,8 @@ p{
     font-size: 20px;
 }
 .half-width img{
-    width: 750px;
-    height: 700px;
+    width: 100%;
+    /* image size kore dio onnno section ar jonno */
    
 }
 .header-section{
