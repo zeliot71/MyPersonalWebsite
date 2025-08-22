@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap">
-    <title>Zihad Shariar's Personal Website</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zihad Shariar - Web Developer & SEO Enthusiast. I build fast, accessible, growth-focused web experiences and share what I learn with the community." />
+  <meta name="keywords" content="web developer, SEO, frontend, fullstack, portfolio, JavaScript, TypeScript, React" />
+  <meta name="author" content="Zihad Shariar" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zihadshariar.dev/" />
+  <meta property="og:title" content="Zihad Shariar - Web Developer & SEO Enthusiast" />
+  <meta property="og:description" content="I build fast, accessible, growth-focused web experiences and share what I learn with the community." />
+  <meta property="og:image" content="/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://zihadshariar.dev/" />
+  <meta property="twitter:title" content="Zihad Shariar - Web Developer & SEO Enthusiast" />
+  <meta property="twitter:description" content="I build fast, accessible, growth-focused web experiences and share what I learn with the community." />
+  <meta property="twitter:image" content="/og-image.jpg" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zihad Shariar",
+    "jobTitle": "Web Developer & SEO Enthusiast",
+    "description": "I build fast, accessible, growth-focused web experiences and share what I learn with the community.",
+    "url": "https://zihadshariar.dev",
+    "sameAs": [
+      "https://linkedin.com/in/md-zihad-291984181",
+      "https://github.com/zihadshariar"
+    ]
+  }
+  </script>
+  
+  <title>Zihad Shariar - Web Developer & SEO Enthusiast</title>
 </head>
 <body>
-    <!-- Header Section start -->
-    <section class="header-section">
-        <div class="half-width-left greeting">
-            <h2>Hello I'm</h2>
-            <h1>Zihad Shariar</h1>
-            <p>I’m a designer who codes, I care deeply about creating world-class, useful, and beautiful products that help people and make a difference.</p>
-            <a href="www.linkedin.com/in/md-zihad-291984181">HIRE ME</a>
-        </div>
-        <div class="half-width-right profile1">
-            <img src="images/profile1.png" alt="">
-        </div>
-    </section>
-    
-    <!-- Biography section start -->
-    <section class="biography-section">
-        <div class="half-width">
-            <img src="images/profile2.png" alt="">
-            <div class="title">
-                <h1 class="title-name">Zihad Shariar</h1>
-                <h2 class="title-title">Full stack Web Developer</h2>
-            </div>
-
-        </div>
-        <div class="half-width biography">
-            <h1>Biography</h1>
-            <p>I recently completed Programing Hero|Full Stack Web development journey and am currently learning more about Node. js, Python, C#. ASP.NET, and PHP. I am actively looking for development position.</p>
-            <a target="_blank" href="https://aliyensha.github.io/MyPortfolio/" >Download My CV</a>
-        </div>
-    </section>
-    <!--  -->
-    <section class="latest-work">
-        <h1 class="latest-project">My Latest Project</h1>
-        <div class="work">
-            <img src="images/latest-work/work-1.png" width="100%;">
-        </div>
-            <div class="work">
-                <img src="images/latest-work/work-2.jpg" width="100%;">
-        </div>
-        <div class="work">
-            <img src="images/latest-work/work-3.jpg" width="100%;">
-        </div>
-    </section>
-    <section class="footer-area">
-        <div class="comment-area">
-            <h1 class="guru-said">What my Guru Said</h1>
-            <h2 class="guru">Jhankar Mahbub</h2>
-            <h3 class="gurus-title">Founder & CEO Programming Hero</h3>
-            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing. <br> Omnis, nihil voluptatibus!</p>
-        </div>
-        <div class="mail">
-            <h2>Leave me a Message here..</h2>
-            <h1>zihad.sn@writeme.com</h1>
-        </div>
-        <p class="copyright">©️ All right reserved|Zihad shariar 2022</p>
-    </section>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
