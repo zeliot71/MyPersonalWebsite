@@ -1,158 +1,123 @@
-body{
-    font-family: 'BIZ UDMincho', serif;
-    margin: 0;
-}
-section{
-    height: 560px;
-}
-h1{
-    color: hotpink;
-    font-size: 40px;
-}
-h2{
-    font-size: 40px;
-}
-.half-width{
-    width: 48%;
-    padding: 1%;
-    /* margin-left: 10%; */
-    float: left;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.half-width-left{
-    width: 40%;
-    padding: 1%;
-    margin-left: 5%;
-    float: left;
-}
-.half-width-right{
-    width: 40%;
-    padding: 2%;
-    margin-left: 6%;
-    float: right;
-    margin-bottom: 40px;
-}
-.half-width-right img{
-    width: 70%;
-}
-.greeting{
-    /* margin-top: 200px; */
-    justify-content: center;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-}
-.greeting p{
-    width: 80%;
-}
-a{
-    text-decoration: none;
-    background-image: linear-gradient(hotpink, red);
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    color: white;
-}
-p{
-    font-size: 20px;
-}
-.half-width img{
-    width: 100%;
-    /* image size kore dio onnno section ar jonno */
-   
-}
-.header-section{
-    background-image: url(images/header-bg.png);
-    background-repeat: no-repeat;
-    margin-bottom: 5px;
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+    overflow-x: hidden;
+  }
+  
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
     
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-blue;
+  }
+  
+  /* Skip to content link */
+  .skip-link {
+    @apply absolute -top-10 left-4 z-50 bg-accent-blue text-white px-4 py-2 rounded-component;
+    @apply focus:top-4 transition-all duration-200;
+  }
 }
-section{
-    height: 800px;
-}
-.biography-section{
-    background-image: url(images/biography-bg.png);
-    background-repeat: no-repeat;
-    width: 100%;
-}
-.biography{
-    margin-top: 20%;
-}
-.title{
-    position: relative;
-    bottom: 200px;
-    left: 144px;
-    
-}
-.title-name{
-    font-size: 40px;
-    font-style: normal;
-    text-shadow: 1px 1px 2px black;
-    color: tomato;
-}
-.title-title{
-    font-size: 25px;
-    margin-top: -35px;
-}
-.work{
-    float: left;
-    width: 30%;
-    padding-left: 2%;
-}
-.latest-work{
-    content: "";
-    display: table;
-    clear: both;
-    background-image: url(images/latest-work-bg.png);
-    background-repeat: none;
-    height: 100%;
-}
-.latest-project{
-    text-align: center;
-    color: black;
-    font-family: serif;   
-}
-.footer-area{
-    background-image: url(images/footer-bg.png);
-}
-.guru-said{
-    font-size: 40px;
-    text-align: center;
-    color: brown;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.guru{
-    font-size: 30px;
-    color: crimson;
-    text-align: center;
-    font-style: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.gurus-title{
-    font-size: 14px;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
 
+/* Component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-accent-blue text-white px-6 py-3 rounded-component font-medium;
+    @apply hover:shadow-neon-blue hover:-translate-y-0.5 transition-all duration-200;
+    @apply focus:shadow-neon-blue focus:-translate-y-0.5;
+    @apply min-h-[44px] inline-flex items-center justify-center;
+  }
+  
+  .btn-ghost {
+    @apply border border-text-secondary text-text-primary px-6 py-3 rounded-component font-medium;
+    @apply hover:border-accent-blue hover:text-accent-blue hover:shadow-neon-blue;
+    @apply transition-all duration-200 min-h-[44px] inline-flex items-center justify-center;
+  }
+  
+  .card {
+    @apply bg-surface border border-surface-secondary rounded-component p-6;
+    @apply hover:shadow-card-hover hover:border-accent-blue/30 transition-all duration-200;
+    @apply hover:shadow-neon-blue/20;
+  }
+  
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-surface-secondary border border-accent-blue/30 text-accent-blue;
+    @apply hover:border-accent-blue hover:shadow-neon-blue/20 transition-all duration-200;
+  }
+  
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-blue via-accent-green to-accent-magenta;
+    @apply bg-clip-text text-transparent;
+  }
+  
+  .neon-border {
+    @apply border border-accent-blue/30 hover:border-accent-blue;
+    @apply hover:shadow-neon-blue/30 transition-all duration-200;
+  }
 }
-.comment{
-    font-size: 18px;
-    color: darkblue;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
-.comment-area{
-    margin-top: 200px;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
-.mail{
-    text-align: center;
-  background-color: brown;
-  padding: 1px;
-    margin:54px 300px;
-    border-radius: 47px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+::-webkit-scrollbar-track {
+  @apply bg-surface;
 }
-.copyright{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: small;
-    text-align: center;
-    margin-top: 300px;
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-blue/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-blue/70;
 }

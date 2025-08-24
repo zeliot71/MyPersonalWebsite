@@ -1,4 +1,4 @@
-import './style.css'
+import '../style.css'
 import { initializeApp } from './app'
 
 // Initialize the application
