@@ -13,6 +13,7 @@
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
     "vite": "^7.1.3"
   }
 }
